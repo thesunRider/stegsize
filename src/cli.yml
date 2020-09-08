@@ -1,0 +1,40 @@
+name: stegsize
+version: "1.1.0"
+author: thesun_Rider,Arjun_eda peru idada,Eda evdam
+about: Hide files inside the size of other files
+args:
+    - read:
+        short: r
+        long: read
+        value_name: FILER
+        help: Take a file that contain hidden data in size attribute
+        takes_value: true
+    - password:
+        short: p
+        long: password
+        value_name: PASS
+        help: Sets the password to use for read/write
+        required: true
+        takes_value: true
+    - write:
+        short: w
+        long: write
+        value_name: FILEW
+        help: Writes the data to a file
+        takes_value: true
+    - data:
+        short: d
+        long: data
+        value_name: DATAW
+        help: The String data to be embedded into the file size
+        takes_value: true
+    - info:
+        short: i
+        long: info
+        help: Show info about the file
+    - extract:
+        short: e
+        long: extract
+        help: Extract the original file and appended data (Note that the appended data is saved as apppended.data and original as original.data)
+        value_name: FILEX
+        takes_value: true
